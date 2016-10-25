@@ -5,7 +5,7 @@ module.exports = {
 		app: "./js/app"
 	},
 	output: {
-		path: __dirname + '/build',
+		path: __dirname,
 		filename: 'bundle.js'
 	},
 	watch: true,
@@ -13,7 +13,7 @@ module.exports = {
 		loaders: [{
 			test: /\.js$/,
 			loader: 'babel',
-			exclude: /\/node_modules\//,
+			exclude: /node_modules/,
 			query: {
         		presets: ['es2015']
       		}
@@ -32,14 +32,18 @@ module.exports = {
     	}]
 	},
 
-	plugins: []
-}
+	plugins: [
+		new webpack.optimize.UglifyJsPlugin({
+			compress: {
+				warnings: false,
+				drop_console: true
+			}
+		}),
+		new webpack.HotModuleReplacementPlugin()
+	],
 
-module.exports.plugins.push(
-	new webpack.optimize.UglifyJsPlugin({
-		compress: {
-			warnings: false,
-			drop_console: true
-		}
-	})
-);
+	devServer: {
+		host: "localhost",
+		port: 80
+	}
+}

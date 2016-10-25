@@ -16,17 +16,13 @@ npm i karma -g
 karma start
 ```
 
-Для старта проекта нужен локальный веб сервер, я использую http-server.
-Если http-server не установлен, делаем это так:
+Для запуска проекта
 
 ```shell
-npm i http-server -g
+webpack-dev-server
 ```
 
-Далее запускам сам веб сервер
+По адресу http://localhost будет доступно приложение
 
-```shell
-http-server
-```
 
-Теперь по адресу http://localhost будет доступно приложение
+Ответы на теоретические вопросы в файле answers.txt

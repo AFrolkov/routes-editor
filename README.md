@@ -26,7 +26,7 @@ npm i http-server -g
 Далее запускам сам веб сервер
 
 ```shell
-http-server -p 80
+http-server
 ```
 
 Теперь по адресу http://localhost будет доступно приложение

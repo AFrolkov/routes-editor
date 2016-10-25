@@ -1,0 +1,11 @@
+$height: 500px;
+
+#map {
+  height: $height;
+  display: block;
+}
+
+.container {
+  padding-top: 20px;
+  min-width: 500px;
+}

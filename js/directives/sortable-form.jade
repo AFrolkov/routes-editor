@@ -1,0 +1,8 @@
+form(data-ng-submit="locationController.addPoint(locationController.pointName)")
+    div.form-group
+        input.form-control(type="text", name="pointName", placeholder="Введите адрес", 
+            data-ng-model="locationController.pointName")
+ul.list-group(data-ng-sortable="locationController.sortableConf")
+    li.list-group-item(data-ng-repeat="geoPoint in locationController.geoPoints track by $index") {{geoPoint.name}}
+        button.close(type="button", aria-label="Close")
+            span(aria-hidden="true", data-ng-click="locationController.removePoint($index)") &times;

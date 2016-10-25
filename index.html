@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="buld/bundle.js"></script>
+  </head>
+
+  <body ng-app="myApp" ng-controller="LocationController as locationController">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-4">
+          <sortable-form></sortable-form>
+        </div>
+        <div class="col-xs-8">
+          <ya-map id="map" ya-zoom="10" ya-center="[37.64, 55.76]" ya-after-init="locationController.afterMapInit($target)">
+            <ya-collection>
+              <ya-geo-object ya-source="locationController.lines" ya-options="{{locationController.lines.options}}"></ya-geo-object>
+              <ya-geo-object ya-source="geoPoint" ng-repeat="geoPoint in locationController.geoPoints" ya-options="{{geoPoint.options}}" ya-event-dragend="locationController.dragEnd($event)"></ya-geo-object>
+            </ya-collection>
+          </ya-map> 
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

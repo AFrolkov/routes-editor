@@ -39,11 +39,10 @@ module.exports = {
 				drop_console: true
 			}
 		}),
-		new webpack.HotModuleReplacementPlugin()
 	],
 
 	devServer: {
 		host: "localhost",
-		port: 80
+		port: 80,
 	}
 }

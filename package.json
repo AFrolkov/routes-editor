@@ -30,7 +30,7 @@
     "webpack-uglify-js-plugin": "^1.1.9"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack-dev-server --inline --hot"
   },
   "author": "Artem Frolkov",
   "license": "ISC"

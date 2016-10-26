@@ -19,10 +19,10 @@ karma start
 Для запуска проекта
 
 ```shell
-webpack-dev-server
+npm run dev
 ```
 
-По адресу http://localhost будет доступно приложение
+По адресу http://localhost:80 будет доступно приложение
 
 
 Ответы на теоретические вопросы в файле answers.txt
